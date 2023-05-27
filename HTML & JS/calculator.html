@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label >Number 1</label><br>
+    <input type="text" id="number1"><br>
+    <label >Number 2</label><br>
+    <input type="text" id="number2"><br><br>
+
+    <button onclick="add()">+</button>
+    <button  onclick="sub()">-</button>
+    <button  onclick="multiply()">x</button>
+    <button  onclick="div()">/</button>
+    <p id="result">Resulu =</p>
+
+
+    <script>
+
+        function add(){
+            let n1=document.getElementById("number1").value;
+            let n2=document.getElementById("number2").value;
+            let result=parseInt(n1)+parseInt(n2);
+            document.getElementById("result").innerHTML="Result = "+result;
+        }
+        function sub(){
+            let n1=document.getElementById("number1").value;
+            let n2=document.getElementById("number2").value;
+            let result=n1-n2;
+            document.getElementById("result").innerHTML="Result = "+result;
+        }
+        function multiply(){
+            let n1=document.getElementById("number1").value;
+            let n2=document.getElementById("number2").value;
+            let result=n1*n2;
+            document.getElementById("result").innerHTML="Result = "+result;
+        }
+        function div(){
+            let n1=document.getElementById("number1").value;
+            let n2=document.getElementById("number2").value;
+            let result=n1/n2;
+            document.getElementById("result").innerHTML="Result = "+result;
+        }
+
+    </script>
+</body>
+</html>

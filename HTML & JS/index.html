@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label>Name</label>
+    <input type="text" id="name" oninput="nameValidation()">
+    <p id="nameValidation"></p>
+    <input type="button" value="Ok" id="btnOk" onclick="namePrint()">
+    <br>
+    <p id="showText"></p>
+
+
+    <script>        
+        // let btnOk = document.getElementById('btnOk');
+
+        function namePrint() {
+            let name = document.getElementById("name").value;
+            document.getElementById('showText').innerHTML ="Welcome "+ name;
+        }
+
+        function nameValidation(){
+            let name = document.getElementById("name").value;
+            let btnOk = document.getElementById('btnOk');
+
+            if(name.length>=3 && name.length<=10){
+                document.getElementById("nameValidation").innerHTML="Good";
+                document.getElementById("nameValidation").style.color="green";
+                document.getElementById("btnOk").style.visibility="visible";
+            }
+            else{
+              document.getElementById("nameValidation").innerHTML="Name must be between 3 to 10 character";  
+              document.getElementById("nameValidation").style.color="red";
+              document.getElementById("btnOk").style.visibility="hidden";
+              
+            }
+
+        }
+    </script>
+</body>
+
+</html>
