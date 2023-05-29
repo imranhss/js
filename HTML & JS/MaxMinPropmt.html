@@ -11,22 +11,27 @@
 
 
     <script>
+        let n=prompt("pls enter item no");
         let max=0;
         let min=999999999;
-        for(let i=1; i<=2; i++){
+        let avarage=0;
+        let total=0;
+
+        for(let i=1; i<=n; i++){ 
            let input= prompt("Pls Enter number "+ i);
+            total +=parseInt(input); // 0+10=10+20 total=total+input
 
             if(max<input){
                 max=input;
-            }         
+            }        
             
             if(min>input){  10>15
                 min=input;
-            }
-                       
+            }                       
         }
-
-        alert("Max no is "+max+" Min is "+ min);
+    avarage = total / n;
+        
+        alert("Max no is "+max+" Min is "+ min+"  Total is "+total +" Avrage is "+avarage);
     </script>
 </body>
 </html>
