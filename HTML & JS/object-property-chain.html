@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            font-size: 12pt;
+            color: tomato;
+            font-family: Verdana;
+        }
+
+        .clickNote{
+            font-size: 12pt;
+            font-weight: bold;
+            color: tomato;
+            background-color: black;
+            font-family: Verdana;
+        }
+ 
+ </style>
+
+
+</head>
+<body>
+    
+    <h2>Object Hierrarchy Practice</h2>
+    <span class="clickNote">&nbsp; Click the Button: &nbsp;</span>
+    <form name="petstore">
+        <input type="text" name="puppy" value="Tommy">
+        <input type="button" name="clicker" value="Click to change the text"
+        onclick="doIt()" ondblclick="doItDbl()" onmouseenter="doItEnter()"
+        onMouseleave="doItOver()">
+    </form>
+
+
+    <script>
+        function doIt(){
+            window.document.petstore.puppy.value="Swissy";
+            window.document.petstore.clicker.value="I have been Cliced";
+        }
+        function doItDbl(){
+            window.document.petstore.puppy.value="Dog";
+            window.document.petstore.clicker.value="I have been Double Cliced";
+        }
+        function doItEnter(){
+            window.document.petstore.puppy.value="Flying Dog";
+            window.document.petstore.clicker.value="I have been Double Cliced";
+        }
+        function doItOver(){
+            window.document.petstore.puppy.value="Swissy";
+            window.document.petstore.clicker.value="Mouse Out";
+        }
+
+
+    </script>
+</body>
+</html>
