@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 
+let forms=["form", "form"] 
+forms[1]
+-->  
+<body>
+    <form>
+        <label for="">Name</label>
+        <input type="text"><br>
+        <label for="">Email</label>
+        <input type="email"><br>
+        <label for="">Cell No</label>
+        <input type="text"><br>
+        <input type="button" onclick="setText('01619192323','Rajib@gmail.com')" value="Show">
+    </form>
+<hr>
+    <form>
+        <label for="">S_Name</label>
+        <input type="text"><br>
+        <label for="">S_Email</label>
+        <input type="email"><br>
+        <label for="">S_Cell No</label>
+        <input type="text"><br>
+        
+    </form>
+
+    <script>
+        function setText(name, email){
+            document.forms[0].elements[0].value=name;
+            document.forms[1].elements[1].value=email;
+        }
+    </script>
+
+</body>
+
+</html>
