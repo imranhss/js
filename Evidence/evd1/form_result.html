@@ -27,13 +27,14 @@
     </pre>
 
     <script>
-        document.getElementById("name").innerHTML=localStorage.getItem("s_name");
-        document.getElementById("email").innerHTML=localStorage.getItem("s_email");
-        document.getElementById("password").innerHTML=localStorage.getItem("s_password");
-        document.getElementById("gender").innerHTML=localStorage.getItem("s_gender");
-        document.getElementById("subject").innerHTML=localStorage.getItem("s_subject");
-        document.getElementById("hobby").innerHTML=localStorage.getItem("s_hobby");
-        document.getElementById("about").innerHTML=localStorage.getItem("s_about");
+        document.getElementById("name").innerHTML=sessionStorage.getItem("s_name");
+        document.getElementById("email").innerHTML=sessionStorage.getItem("s_email");
+        document.getElementById("password").innerHTML=sessionStorage.getItem("s_password");
+        document.getElementById("gender").innerHTML=sessionStorage.getItem("s_gender");
+        document.getElementById("subject").innerHTML=sessionStorage.getItem("s_subject");
+        document.getElementById("hobby").innerHTML=sessionStorage.getItem("s_hobby");
+        document.getElementById("about").innerHTML=sessionStorage.getItem("s_about");
+
     </script>
 </body>
 </html>

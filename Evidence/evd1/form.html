@@ -118,24 +118,20 @@
                 return false;
             }
 
-            if(document.getElementById("male")!=checked && document.getElementById("female")!=checked && document.getElementById("other")!=checked ){
+            if(document.getElementById('male').checked == false && document.getElementById('female').checked == fasle && document.getElementById('other').checked == fasle){
 
                 document.getElementById("sGender").innerHTML = "Gender must selecet";
                 return false;
             }
             
 
-            
-
-
-
-            localStorage.setItem("s_name", name);
-            localStorage.setItem("s_email", email);
-            localStorage.setItem("s_password", password);
-            localStorage.setItem("s_gender", gender);
-            localStorage.setItem("s_subject", subject);
-            localStorage.setItem("s_hobby", s_hobby);
-            localStorage.setItem("s_about", about);
+            sessionStorage.setItem("s_name", name);
+            sessionStorage.setItem("s_email", email);
+            sessionStorage.setItem("s_password", password);
+            sessionStorage.setItem("s_gender", gender);
+            sessionStorage.setItem("s_subject", subject);
+            sessionStorage.setItem("s_hobby", s_hobby);
+            sessionStorage.setItem("s_about", about);
 
 
         }
