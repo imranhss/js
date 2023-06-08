@@ -118,7 +118,7 @@
                 return false;
             }
 
-            if(document.getElementById('male').checked == false && document.getElementById('female').checked == fasle && document.getElementById('other').checked == fasle){
+            if(!(document.getElementById('male').checked || document.getElementById('female').checked || document.getElementById('other').checked)){
 
                 document.getElementById("sGender").innerHTML = "Gender must selecet";
                 return false;
