@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trainee Data Form</title>
+</head>
+
+<body>
+    <h1>Trainee Data Form</h1>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" name="contact" required><br><br>
+
+        <label for="remarks">Remarks:</label>
+        <textarea id="remarks" name="remarks"></textarea><br><br>
+
+        <label for="sex">Sex:</label>
+        <input type="radio" id="male" name="sex" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="sex" value="Female">
+        <label for="female">Female</label><br><br>
+
+        <label for="courses">Courses:</label><br>
+        <input type="checkbox" id="nt" name="courses" value="NT">
+        <label for="nt">NT</label><br>
+        <input type="checkbox" id="iad" name="courses" value="IAD">
+        <label for="iad">IAD</label><br>
+        <input type="checkbox" id="ddd" name="courses" value="DDD">
+        <label for="ddd">DDD</label><br>
+        <input type="checkbox" id="esad" name="courses" value="ESAD">
+        <label for="esad">ESAD</label><br><br>
+
+        <label for="location">Location:</label>
+        <select id="location" name="location">
+            <option value="Banani">Banani</option>
+            <option value="Dhanmondi">Dhanmondi</option>
+            <option value="Mirpur">Mirpur</option>
+            <!-- Add more location options as needed -->
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            var name = document.getElementById('name').value;
+            var contact = document.getElementById('contact').value;
+            var remarks = document.getElementById('remarks').value;
+            var sex = document.querySelector('input[name="sex"]:checked').value;
+
+            // Get selected courses
+            var courses = [];
+            var checkboxes = document.querySelectorAll('input[name="courses"]:checked');
+            checkboxes.forEach(function (checkbox) {
+                courses.push(checkbox.value);
+            });
+
+            // Get selected location
+            var location = document.getElementById('location').value;
+
+            // Create output string
+            var output = "Name: " + name + "\n";
+            output += "Contact: " + contact + "\n";
+            output += "Remarks: " + remarks + "\n";
+            output += "Sex: " + sex + "\n";
+            output += "Courses: " + courses.join(", ") + "\n";
+            output += "Location: " + location;
+
+            // Open a new window to display the submitted data
+            var newWindow = window.open('', '_blank');
+            newWindow.document.write('<pre>' + output + '</pre>');
+        }
+        var form = document.getElementById('myForm');
+        form.addEventListener('submit', handleSubmit);
+
+    </script>
+
+</body>
+
+</html>
