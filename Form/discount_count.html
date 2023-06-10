@@ -7,7 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <label for="">Unit Price</label>
+    <input type="text" id="uPrice"><br>
+
+    <label for="">Quantity</label>
+    <input type="text" id="quantity" oninput="calculatePrice()"><br>
 
     <label for="">Price</label>
     <input type="text" id="price" ><br>
@@ -17,15 +21,18 @@
     
     <label for="">Amount</label>
     <input type="text" id="amount"><br>
-    <button onclick="calculatePrice()">submit</button>
+
 
     <script>
         function calculatePrice(){
-            price=document.getElementById("price").value;
-            discount=document.getElementById("discount").value;
-            amount=document.getElementById("amount").value;
+            //price=document.getElementById("price").value;
+            // discount=document.getElementById("discount").value;
+            // amount=document.getElementById("amount").value;
 
-            
+            uPrice=document.getElementById("uPrice").value;
+            quantity=document.getElementById("quantity").value;
+
+            price=uPrice*quantity;            
             discountAmount=0;
             payableAmount=0;
             
@@ -44,6 +51,7 @@
 
             document.getElementById("discount").value=discountAmount;
             document.getElementById("amount").value=payableAmount;
+            document.getElementById("price").value=price;
         }
 
     </script>
