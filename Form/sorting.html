@@ -10,16 +10,19 @@
 
 
     <script>
-        let myArr=[];
-        
+
+        let myArr=[];   
+        let sum=0; // if sum is needed   
 
         for (let i=1; i<=5; i++ ){
-            let input=prompt("Plse neter "+i+" number: ");
-            myArr.push(input);
+            let input=parseInt(prompt("Plse neter "+i+" number: "));
+            sum +=input;
+            myArr.push(parseInt(input));
 
         }
         
         document.write(myArr+" <br>");
+        document.write(sum+" <br>");  // if sum is needed  
 
         for(let i=0; i<myArr.length-1; i++){ //50,17,86,40,96
             for(let j=0; j<myArr.length-i-1; j++){
